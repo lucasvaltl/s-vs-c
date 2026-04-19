@@ -327,97 +327,55 @@ html, body {
 
 @media (max-width: 680px) {
   :root {
-    --page-pad-x: 16px;
-    --page-pad-y: 20px;
+    --page-pad-x: 12px;
+    --page-pad-y: 16px;
   }
 
-  /* Header */
   .header-title {
-    font-size: 20px;
-  }
-
-  .header-sub {
-    font-size: 12px;
-  }
-
-  /* Summary cards stack vertically */
-  .model-cards {
-    grid-template-columns: 1fr;
-  }
-
-  .model-card-title {
     font-size: 18px;
   }
 
+  .header-sub {
+    font-size: 11px;
+  }
+
+  .model-card {
+    padding: 16px;
+  }
+
+  .model-card-title {
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+
   .model-card-body {
-    font-size: 12px;
+    font-size: 11px;
   }
 
-  /* Each row becomes a vertical block:
-     dimension label → seat cell → consumption cell */
   .row {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr 80px 1fr;
   }
 
-  .dimension {
-    order: -1;
-    border-left: none;
-    border-right: none;
-    border-bottom: 1px solid var(--gray-100);
-    justify-content: flex-start;
-    padding: 6px 14px;
-    background: var(--gray-50);
-  }
-
-  .cell--seat {
-    justify-content: flex-start;
-    text-align: left;
-    border-right: none;
-    border-bottom: 1px solid var(--gray-100);
-  }
-
-  .cell--seat::before {
-    content: 'SEAT';
-    display: block;
-    font-family: var(--font-mono);
-    font-size: 8px;
-    font-weight: 500;
-    letter-spacing: 0.14em;
-    color: var(--gray-300);
-    margin-bottom: 4px;
-  }
-
-  .cell--usage::before {
-    content: 'CONSUMPTION';
-    display: block;
-    font-family: var(--font-mono);
-    font-size: 8px;
-    font-weight: 500;
-    letter-spacing: 0.14em;
-    color: var(--accent);
-    margin-bottom: 4px;
-  }
-
-  .cell--seat,
-  .cell--usage {
-    flex-direction: column;
-    align-items: flex-start;
+  .cell {
+    padding: 8px 8px;
   }
 
   .cell-value {
-    font-size: 13px;
+    font-size: 11px;
     max-width: 100%;
   }
 
-  /* Tag lists */
-  .cell--seat .tag-list,
-  .cell--usage .tag-list {
-    justify-content: flex-start;
+  .dimension-label {
+    font-size: 8px;
+    letter-spacing: 0.06em;
   }
 
-  /* Category headers */
   .category-name {
-    font-size: 10px;
+    font-size: 9px;
+  }
+
+  .tag {
+    font-size: 9px;
+    padding: 2px 6px;
   }
 }
